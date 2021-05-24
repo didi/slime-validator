@@ -1,0 +1,38 @@
+{
+  "name": "slime-validator",
+  "version": "1.0.0",
+  "description": "slime-validator is a JavaScript library of validation based on `Plugin` system and make data validation be easy.",
+  "main": "index.js",
+  "module": "dist/slime-validator.umd.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "jest --watch",
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [
+    "validator",
+    "validate",
+    "validation",
+    "slime-validator"
+  ],
+  "files": [
+    "index.js",
+    "utils.js",
+    "package.json",
+    "LICENSE",
+    "README.md",
+    "packages"
+  ],
+  "author": "ryouaki(46517115@qq.com)",
+  "license": "Apache",
+  "devDependencies": {
+    "@babel/preset-env": "^7.13.12",
+    "babel-loader": "^8.2.2",
+    "jest": "^26.6.3",
+    "webpack": "^5.30.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}

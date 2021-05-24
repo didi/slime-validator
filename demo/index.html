@@ -1,0 +1,15 @@
+<html>
+  <script src="./../dist/slime-validator.umd.js"></script>
+  <script>
+    let ret = null
+
+    const v = new window.SlimeValidator({
+      field: [{ MaxLength: 10 }]
+    })
+    ret = v.validate({field: '11222222221'})
+    console.log(JSON.stringify(ret))
+  </script>
+  <body>
+
+  </body>
+</html>
