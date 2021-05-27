@@ -1,3 +1,19 @@
+[![NPM version][npm-image]][npm-url]
+[![NPM quality][quality-image]][quality-url]
+[![npm download][download-image]][download-url]
+[![build status][travis-image]][travis-url]
+
+[travis-image]: https://travis-ci.org/didi/slime-validator.svg?branch=master&status=passed
+[travis-url]: https://travis-ci.org/didi/slime-validator
+[download-image]: https://img.shields.io/npm/dm/slime-validator.svg?style=flat-square
+[download-url]: https://npmjs.org/package/slime-validator
+[npm-image]: https://img.shields.io/npm/v/slime-validator.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/slime-validator
+[quality-image]: http://npm.packagequality.com/shield/slime-validator.svg?style=flat-square
+[quality-url]: http://packagequality.com/#?package=slime-validator
+[codecov-image]: https://img.shields.io/codecov/c/github/didi/slime-validator.svg?style=flat-square
+[codecov-url]: https://codecov.io/gh/didi/slime-validator
+
 # slime-validator 
 `slime-validator` is a JavaScript library of validation based on `Plugin` system and make data validation be easy.
 
