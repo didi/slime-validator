@@ -53,7 +53,7 @@ Plugin system let you make your own validate rules very easy and complex validat
 ### For CDN
 ```html
   <html>
-    <script src="./../dist/slime-validator.umd.js"></script>
+    <script src="https://unpkg.com/slime-validator@1.0.3/dist/slime-validator.umd.js"></script>
     <script>
       let ret = null
 
