@@ -1,6 +1,6 @@
 {
   "name": "slime-validator",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "slime-validator is a JavaScript library of validation based on `Plugin` system and make data validation be easy.",
   "main": "index.js",
   "module": "dist/slime-validator.umd.js",
@@ -34,5 +34,12 @@
   },
   "engines": {
     "node": ">=10.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/didi/slime-validator/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didi/slime-validator.git"
   }
 }
