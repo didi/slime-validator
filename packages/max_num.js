@@ -13,7 +13,6 @@ module.exports = {
     if (!value) {
       return true;
     }
-
     if (isNumber(value) && value <= tagValue) {
       return true;
     }

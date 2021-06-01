@@ -8,11 +8,11 @@ module.exports = {
     return `${field} is not a url`
   },
   validate (field, value, opts) {
+    // 暂不支持 下面属性
     // allowDataUrl 是否是数据地址 base64
-    // allowLocal 是否是本地连接
+    // allowLocal 是否是本地url
     // schemes
     const { tagValue, allowDataUrl = false, allowLocal = false, schemes = ['http', 'https'] } = opts;
-
     if (!tagValue || !value) {
       return true;
     }

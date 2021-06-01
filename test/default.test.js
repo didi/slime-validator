@@ -508,4 +508,65 @@ describe("默认Rule校验", () => {
     expect(JSON.stringify(ret))
     .toBe(JSON.stringify({"field":"Test field is failed"}));
   });
+
+  it("IsEmail Success", () => {
+    let ret = null
+    try {
+      const v = new Validator({
+        field: { IsEmail: true }
+      })
+      ret = v.validate({field: 'benmo1602@gmail.com'})
+    } finally {
+      expect(JSON.stringify(ret)).toBe(JSON.stringify(null));
+    }
+    ret = Validator.validate({field: [{ IsEmail: true }]}, {field: 'benmo1602@gmail.com'});
+
+    expect(JSON.stringify(ret))
+      .toBe(JSON.stringify(null));
+  });
+
+  it("IsEmail Failed", () => {
+    let ret = null
+    try {
+      const v = new Validator({
+        field: { IsEmail: true }
+      })
+      ret = v.validate({field: 'benmo1602.com'})
+    } finally {
+      expect(JSON.stringify(ret)).toBe(JSON.stringify({field: 'field is not a email'}));
+    }
+    ret = Validator.validate({field: [{ IsEmail: true }]}, {field: 'benmo1602.com'});
+
+    expect(JSON.stringify(ret)).toBe(JSON.stringify({field: 'field is not a email'}));
+  });
+
+  it("IsURL Success", () => {
+    let ret = null
+    try {
+      const v = new Validator({
+        field: { IsURL: true }
+      })
+      ret = v.validate({field: 'https://gist.github.com/dperini/729294'})
+    } finally {
+      expect(JSON.stringify(ret)).toBe(JSON.stringify(null));
+    }
+    ret = Validator.validate({field: [{ IsURL: true }]}, {field: 'https://gist.github.com/dperini/729294'});
+
+    expect(JSON.stringify(ret))
+      .toBe(JSON.stringify(null));
+  });
+
+  it("IsURL Failed", () => {
+    let ret = null
+    try {
+      const v = new Validator({
+        field: { IsURL: true }
+      })
+      ret = v.validate({field: 'gist.github.com/dperini/729294'})
+    } finally {
+      expect(JSON.stringify(ret)).toBe(JSON.stringify({field: 'field is not a url'}));
+    }
+    ret = Validator.validate({field: [{ IsURL: true }]}, {field: 'gist.github.com/dperini/729294'});
+    expect(JSON.stringify(ret)).toBe(JSON.stringify({field: 'field is not a url'}));
+  });
 })
