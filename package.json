@@ -1,6 +1,6 @@
 {
   "name": "slime-validator",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "slime-validator is a JavaScript library of validation based on `Plugin` system and make data validation be easy.",
   "main": "index.js",
   "module": "dist/slime-validator.umd.js",
