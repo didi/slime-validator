@@ -40,3 +40,16 @@
   { RegExp: /^a/g }
   { RegExp: '^a' }
 ```
+
+### IsEmail 校验
+email校验，值为email地址字符串。
+
+```js
+  { field: { IsEmail: true } }
+```
+### IsURL 校验
+http|https 校验，值为url地址字符串。
+
+```js
+  { field: [{ IsURL: true }] }
+```
