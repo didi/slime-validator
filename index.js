@@ -29,7 +29,6 @@ function doValidate(schema, target, root, parent) {
   const fields = Object.keys(_schema);
   const fieldNum = fields.length;
   let errors = null;
-
   // 之所以不用forEach，是因为原始for循环的内存效率和执行效率都更优。在大流量场景下有一定性能收益。
   for (let i = 0; i < fieldNum; i++) {
     const field = fields[i];
@@ -40,7 +39,6 @@ function doValidate(schema, target, root, parent) {
     parent = target;
 
     let rs = isArray(rules) ? rules : [rules];
-
     const ruleNum = rs.length;
     for (let j = 0; j < ruleNum && !hasError; j++) {
       const rule = rs[j];
@@ -79,7 +77,7 @@ function doValidate(schema, target, root, parent) {
           } else {
             msg = plugin.message(field, value, options)
           }
-          
+
           hasError = true
           err = {
             [field]: msg
@@ -111,7 +109,7 @@ function doValidate(schema, target, root, parent) {
             }
             errs.push((isObject(value[k]) || e === null) ? e : e[field]);
           }
-          
+
           if (hasError) {
             err = {
               [field]: errs
@@ -120,9 +118,8 @@ function doValidate(schema, target, root, parent) {
         } else {
           console.warn(`$fields for ${field} will be ignored`);
         }
-      } 
+      }
     }
-
     if (hasError) {
       if (field === __$$DEFAULT) {
         errors = err[field]
@@ -198,5 +195,7 @@ Validator.usePlugin(require('./packages/min_length'));
 Validator.usePlugin(require('./packages/max_num'));
 Validator.usePlugin(require('./packages/min_num'));
 Validator.usePlugin(require('./packages/regexp'));
+Validator.usePlugin(require('./packages/is_email'));
+Validator.usePlugin(require('./packages/is_url'));
 
 module.exports = Validator;
