@@ -1,6 +1,6 @@
 {
   "name": "slime-validator",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "slime-validator is a JavaScript library of validation based on `Plugin` system and make data validation be easy.",
   "main": "index.js",
   "module": "dist/slime-validator.umd.js",
@@ -23,7 +23,8 @@
     "LICENSE",
     "README.md",
     "packages",
-    "dist"
+    "dist",
+    "index.d.ts"
   ],
   "author": "ryouaki(46517115@qq.com)",
   "license": "Apache",
